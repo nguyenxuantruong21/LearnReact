@@ -1,19 +1,28 @@
 import logo from './logo.svg'
 import './App.css'
+import Clock from './Clock'
+import BareInput from './BareInput'
+import Layout from './Layout'
+import BareButton from './BareButton'
+import LoginControl from './LoginControl'
+import CorrectlyState from './CorrectlyState'
+import ProductList from './ProductList/ProductList'
+import Form from './Form/Form'
 
 function App() {
   return (
     <div className='App'>
-      <h1>create by xuan truong</h1>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+      {/* <Layout>
+        <h1>Hello</h1>
+        <BareInput type='password' value='100' autoFocus={true} className='inputControl' />
+        <BareButton />
+      </Layout> */}
+      {/*
+      <LoginControl isLoggedIn={false} /> */}
+
+      {/* <CorrectlyState /> */}
+      {/* <ProductList /> */}
+      <Form />
     </div>
   )
 }
