@@ -8,6 +8,8 @@ import LoginControl from './LoginControl'
 import CorrectlyState from './CorrectlyState'
 import ProductList from './ProductList/ProductList'
 import Form from './Form/Form'
+import UnControlComponent from './Form/UnControlComponent'
+import Calculator from './Calculator/Calculator'
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
 
       {/* <CorrectlyState /> */}
       {/* <ProductList /> */}
-      <Form />
+      {/* <Form /> */}
+      {/* <UnControlComponent /> */}
+      <Calculator />
     </div>
   )
 }
