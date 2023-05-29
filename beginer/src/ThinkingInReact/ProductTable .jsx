@@ -20,6 +20,7 @@ export class ProductTable extends Component {
       rows.push(<ProductRow key={productItem.name} product={productItem} />)
       lastCategory = productItem.category
     })
+
     return (
       <table>
         <thead>

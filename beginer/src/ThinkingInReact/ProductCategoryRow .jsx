@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 
 export class ProductCategoryRow extends Component {
   render() {
+    const { category } = this.props
     return (
       <tr>
-        <th>{this.props.category}</th>
+        <th>{category}</th>
       </tr>
     )
   }
