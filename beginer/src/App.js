@@ -11,6 +11,8 @@ import Form from './Form/Form'
 import UnControlComponent from './Form/UnControlComponent'
 import Calculator from './Calculator/Calculator'
 import FilterableProductTable from './ThinkingInReact/FilterableProductTable '
+import Cart from './CSS/Cart'
+
 
 function App() {
   return (
@@ -28,7 +30,8 @@ function App() {
       {/* <Form /> */}
       {/* <UnControlComponent /> */}
       {/* <Calculator /> */}
-      <FilterableProductTable />
+      {/* <FilterableProductTable /> */}
+      <Cart />
     </div>
   )
 }
