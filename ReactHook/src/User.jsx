@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import UserProfile from "./UserProfile";
 
 const initialAddress = () => {
   console.log("initial");
@@ -11,19 +12,19 @@ const initialAddress = () => {
   };
 };
 
-const getAddress = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        nation: "USA",
-        city: {
-          street: "100 NEW YORK",
-          house: "building",
-        },
-      });
-    }, 3000);
-  });
-};
+// const getAddress = () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({
+//         nation: "USA",
+//         city: {
+//           street: "100 NEW YORK",
+//           house: "building",
+//         },
+//       });
+//     }, 3000);
+//   });
+// };
 
 export default function User() {
   const [firstName] = useState("Alex");
@@ -34,7 +35,7 @@ export default function User() {
     setAge((prevAge) => prevAge + 1);
   };
 
-  const changeCity = () => {
+  const changeStreet = () => {
     setAddress((prevAddress) => {
       const newCity = { ...prevAddress.city };
       newCity.street = "phong van ba vi";
@@ -46,29 +47,27 @@ export default function User() {
   };
 
   // user effect
-  useEffect(() => {
-    console.log("user effect");
-    getAddress().then((res) => {
-      setAddress((prevAddress) => {
-        const newAddress = { ...prevAddress };
-        newAddress.city = res.city;
-        return newAddress;
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  //   console.log("user effect");
+  //   getAddress().then((res) => {
+  //     setAddress((prevAddress) => {
+  //       const newAddress = { ...prevAddress };
+  //       newAddress.city = res.city;
+  //       return newAddress;
+  //     });
+  //   });
+  // }, []);
 
   return (
     <div>
-      <h1>User Function components</h1>
-      <ul>
-        <li>FirstName: {firstName}</li>
-        <li>Age: {age}</li>
-        <li>Nation: {address.nation}</li>
-        <li>street: {address.city.street}</li>
-        <li>house: {address.city.house}</li>
-      </ul>
-      <button onClick={increaseAge}>Increase</button>
-      <button onClick={changeCity}>change city</button>
+      <h1>user function component</h1>
+      <UserProfile
+        address={address}
+        age={age}
+        firstName={firstName}
+        increaseAge={increaseAge}
+      />
+      <button onClick={changeStreet}>change street</button>
     </div>
   );
 }
